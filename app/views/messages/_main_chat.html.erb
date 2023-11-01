@@ -10,27 +10,7 @@
   </div>
 </div>
 <div class="chat-list">
-  <div class="post-item">
-    <div class="name-date">
-      <div class="post-user">Tom
-      </div>
-      <div class="post-date">2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="post-comment">おはよう
-    </div>
-  </div>
-  <div class="post-item">
-    <div class="name-date">
-      <div class="post-user">Tom
-      </div>
-      <div class="post-date">2020/3/31(Wed) 12:45:00
-      </div>
-    </div>
-    <div class="post-comment">おはよう
-    </div>
-  </div>
-
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'post-section', local: true do |f| %>
